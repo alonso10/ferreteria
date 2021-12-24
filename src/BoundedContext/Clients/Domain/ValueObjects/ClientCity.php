@@ -10,7 +10,7 @@ use Src\Shared\Domain\ValueObject\StringValueObject;
 final class ClientCity extends StringValueObject
 {
 
-    const MAX_LENGTH = 15;
+    const MAX_LENGTH = 30;
 
     public function __construct(string $value)
     {

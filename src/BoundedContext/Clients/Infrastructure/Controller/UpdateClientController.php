@@ -6,6 +6,7 @@ namespace Src\BoundedContext\Clients\Infrastructure\Controller;
 use Illuminate\Http\Request;
 use Src\BoundedContext\Clients\Application\GetClientByIdUseCase;
 use Src\BoundedContext\Clients\Application\UpdateClientUseCase;
+use Src\BoundedContext\Clients\Domain\Client;
 use Src\BoundedContext\Clients\Infrastructure\Repositories\EloquentClientRepository;
 
 class UpdateClientController
@@ -22,7 +23,7 @@ class UpdateClientController
     }
 
 
-    public function __invoke(Request $request)
+    public function __invoke(Request $request): ?Client
     {
         $clientId = $request->id;
 

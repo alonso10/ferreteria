@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 
 
 use App\Http\Resources\ClientResource;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Src\BoundedContext\Clients\Infrastructure\Controller\AllClientController;
 
@@ -19,7 +20,8 @@ class GetAllClientController extends Controller
     }
 
 
-    public function __invoke(Request $request) {
+    public function __invoke(Request $request): JsonResponse
+    {
         $records = $this->allClientController->__invoke($request);
         $clients = [];
         if (count($records)) {

@@ -43,7 +43,7 @@ class AllClientUseCase
                 new ClientSurname($client['surname']),
                 new ClientSecondSurname($client['second_surname']),
                 new ClientAddress($client['address']),
-                new ClientPhone($client['phone']),
+                new ClientPhone(intval($client['phone'])),
                 new ClientJob($client['job']),
                 new ClientDepartment($client['department']),
                 new ClientCity($client['city']),
